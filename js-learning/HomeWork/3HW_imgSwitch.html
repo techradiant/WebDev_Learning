@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my</title>
+    <style>
+        .box
+        {
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        button
+        {
+            padding: 30px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="id1" class="box"></div>
+    <div id="id2" class="box"></div>
+    <div id="id3" class="box"></div>
+    <div id="id4" class="box"></div>
+    <div id="id5" class="box"></div>
+
+    <br><br>
+    <button onclick="fun1()">i</button>
+    <button onclick="fun2()">ii</button>
+    <button onclick="fun3()">iii</button>
+    <button onclick="fun4()">iv</button>
+    <button onclick="fun5()">v</button>
+
+    <script>
+        function fun1()
+        {
+            document.getElementById("id1").style.backgroundColor="red";
+            document.getElementById("id2").style.backgroundColor="white";
+            document.getElementById("id3").style.backgroundColor="white";
+            document.getElementById("id4").style.backgroundColor="white";
+            document.getElementById("id5").style.backgroundColor="white";
+            setTimeout(fun2,500)
+        }
+        function fun2()
+        {
+            document.getElementById("id1").style.backgroundColor="white";
+            document.getElementById("id2").style.backgroundColor="red";
+            document.getElementById("id3").style.backgroundColor="white";
+            document.getElementById("id4").style.backgroundColor="white";
+            document.getElementById("id5").style.backgroundColor="white";
+            setTimeout(fun3,500)
+        }
+        function fun3()
+        {
+            document.getElementById("id1").style.backgroundColor="white";
+            document.getElementById("id2").style.backgroundColor="white";
+            document.getElementById("id3").style.backgroundColor="red";
+            document.getElementById("id4").style.backgroundColor="white";
+            document.getElementById("id5").style.backgroundColor="white";
+            setTimeout(fun4,500)
+        }
+        function fun4()
+        {
+            document.getElementById("id1").style.backgroundColor="white";
+            document.getElementById("id2").style.backgroundColor="white";
+            document.getElementById("id3").style.backgroundColor="white";
+            document.getElementById("id4").style.backgroundColor="red";
+            document.getElementById("id5").style.backgroundColor="white";
+            setTimeout(fun5,500)
+        }
+        function fun5()
+        {
+            document.getElementById("id1").style.backgroundColor="white";
+            document.getElementById("id2").style.backgroundColor="white";
+            document.getElementById("id3").style.backgroundColor="white";
+            document.getElementById("id4").style.backgroundColor="white";
+            document.getElementById("id5").style.backgroundColor="red";
+            setTimeout(fun1,500)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* h1{
+            color:rgb(0, 255, 0);
+        } */
+    </style>
+</head>
+<body>
+
+    <select onchange="set()"   id="slCity">
+        <option>Rohtak</option>
+        <option>Panipat</option>
+        <option>Sonipat</option>
+        <option>Sirsa</option>
+        <option>Rewari</option>
+    </select>
+
+    <h1 id="result"></h1>
+
+    <br><br>
+
+    <input type="text" id="txtRed">  <br>
+    <input type="text" id="txtGreen">  <br>
+    <input type="text" id="txtBlue">  <br>
+    
+
+      <button onclick="setcolor()">Setcolor</button>
+    <script>
+
+
+var red=0,green=0,blue=0
+function setcolor()
+{
+   red=parseInt(Math.random()*256)
+   green=parseInt(Math.random()*256)
+   blue=parseInt(Math.random()*256)
+//  red=red+10
+//  green=green+5
+//  blue=blue+1
+  
+document.getElementById("result").style.color=`rgb(${red},${green},${blue})` 
+}
+ 
+
+setInterval(setcolor,1000)
+        function set()
+        {
+            
+            x=document.getElementById("slCity").value
+            //  str=`Your Selected City is=${x}`
+         document.getElementById("result").innerHTML=`Your Selected City is=${x}` 
+            // console.log(str)
+        }
+              
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box
+        {
+            height: 200px;
+            width: 200px;
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        button
+        {
+            padding: 30px;
+            font-size: 20px;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+      <div id="i1" class="box">
+        <img src="" id="img1" alt="">
+      </div>
+      <div id="i2" class="box">
+        <img src="" id="img2" alt="">
+      </div>
+      <div id="i3" class="box">
+        <img src="" id="img3" alt="">
+      </div>
+      <div id="i4" class="box"> 
+        <img src="" id="img4" alt="">
+      </div>
+      <div id="i5" class="box">
+        <img src="" id="img5" alt="">
+      </div>
+<br><br>
+      <button onclick="set1()">i</button>
+      <button onclick="set2()">ii</button>
+      <button onclick="set3()">iii</button>
+      <button onclick="set4()">iv</button>
+      <button onclick="set5()">v</button>
+
+      <script>
+        function set1()
+        {
+            document.getElementById("img1").src="images/nature.jpg"
+            document.getElementById("img2").src=""
+            document.getElementById("img3").src=""
+            document.getElementById("img4").src=""
+            document.getElementById("img5").src=""
+             setTimeout(set2,500)
+        }
+        function set2()
+        {
+            document.getElementById("img1").src=""
+            document.getElementById("img2").src="images/nature.jpg"
+            document.getElementById("img3").src=""
+            document.getElementById("img4").src=""
+            document.getElementById("img5").src=""
+            setTimeout(set3,500)
+        }
+        function set3()
+        {
+            document.getElementById("img1").src=""
+            document.getElementById("img2").src=""
+            document.getElementById("img3").src="images/nature.jpg"
+            document.getElementById("img4").src=""
+            document.getElementById("img5").src=""
+            setTimeout(set4,500)
+            
+        }
+        function set4()
+        {
+            document.getElementById("img1").src=""
+            document.getElementById("img2").src=""
+            document.getElementById("img3").src=""
+            document.getElementById("img4").src="images/nature.jpg"
+            document.getElementById("img5").src=""
+            setTimeout(set5,500)
+        }
+        function set5()
+        {
+            document.getElementById("img1").src=""
+            document.getElementById("img2").src=""
+            document.getElementById("img3").src=""
+            document.getElementById("img4").src=""
+            document.getElementById("img5").src="images/nature.jpg"
+            setTimeout(set1,500)
+        }
+
+      </script>
+</body>
+</html>

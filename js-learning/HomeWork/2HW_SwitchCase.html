@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box-1,
+        #box-2 {
+            text-align: center;
+            width: 30%;
+            height: 300px;
+            margin: 4%;
+            float: left;
+            border: 1px solid black;
+        }
+        button
+        {
+            padding: 20px;
+            font-size: 30px;
+        }
+        #conv
+        {
+            float: left;
+        }
+        input
+        {
+            font-size: 30px;
+            margin-top: 40px;
+            height: 100px;
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box-1" >
+        <input type="text" id="text-1">
+    </div>
+
+    <div id="conv"><br><br>
+
+        <button onclick="shift()"> >>>>>>>> </button><br><br>
+        <button onclick="unshift()"> <<<<<<<< </button><br><br>
+        <button onclick="upper()"> uppercase </button><br><br>
+        <button onclick="changecolor()"> change </button><br><br>
+    </div>
+
+    <div id="box-2">
+        <input type="text" id="text-2">
+    </div>
+
+    <script>
+        function shift()
+        {
+            x=document.getElementById("text-1").value
+            document.getElementById("text-2").value=x
+            document.getElementById("text-1").value=""
+            document.getElementById("box-2").style.backgroundColor="sKyblue";
+            document.getElementById("box-1").style.backgroundColor="white";
+        }
+        function unshift()
+        {
+            x=document.getElementById("text-2").value
+            document.getElementById("text-1").value=x
+            document.getElementById("text-2").value=""
+            document.getElementById("box-1").style.backgroundColor="sKyblue";
+            document.getElementById("box-2").style.backgroundColor="white";
+        }
+        function upper() 
+        {
+            document.getElementById("text-1").style.textTransform="uppercase";
+        }
+        function changecolor() 
+        {
+            document.getElementById("box-1").style.backgroundColor="sKyblue";
+        }
+
+    </script>
+</body>
+</html>

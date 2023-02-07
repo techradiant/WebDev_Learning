@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #box-1,
+      #box-2 {
+        text-align: center;
+        width: 30%;
+        margin: 4%;
+        border: 1px solid black;
+        height: 300px;
+        float: left;
+      }
+      button {
+        padding: 20px;
+        font-size: 30px;
+      }
+      #sep {
+        float: left;
+      }
+      input {
+        font-size: 30px;
+        margin-top: 40px;
+        width: 70%;
+        height: 100px;
+      }
+    </style>
+</head>
+
+
+  <body>
+    <div id="box-1">
+      <input type="text" id="txtFirst" />
+    </div>
+    <div id="sep">
+      <br /><br />
+      <br />
+      <button onclick="shift()">>>>>></button>
+      <br />
+      <br />
+      <button onclick="unshift()"><<<<<</button>
+      <br /><br />
+      <button onclick="upper()">UpperCase</button>
+      <br /><br />
+      <button onclick="changeColor()">Change</button>
+    </div>
+    <div id="box-2">
+      <input type="text" id="txtSecond" />
+    </div>
+
+    <script>
+      function shift() {
+        x = document.getElementById("txtFirst").value;
+        document.getElementById("txtSecond").value = x;
+        document.getElementById("txtFirst").value = "";
+        document.getElementById("box-2").style.backgroundColor = "red";
+        document.getElementById("box-1").style.backgroundColor = "white";
+      }
+
+      function changeColor() {
+        document.getElementById("box-1").style.backgroundColor = "red ";
+      }
+      function unshift() {
+        x = document.getElementById("txtSecond").value;
+        document.getElementById("txtFirst").value = x;
+        document.getElementById("txtSecond").value = "";
+        document.getElementById("box-1").style.backgroundColor = "red";
+        document.getElementById("box-2").style.backgroundColor = "white";
+      }
+
+      function upper() {
+        document.getElementById("txtFirst").style.textTransform = "uppercase";
+      }
+    </script>
+  </body>
+</html>

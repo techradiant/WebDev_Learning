@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* h1{
+            color:rgb(0, 255, 0);
+        } */
+    </style>
+</head>
+<body>
+
+    <select onchange="set()"   id="slCity">
+        <option>Rohtak</option>
+        <option>Panipat</option>
+        <option>Sonipat</option>
+        <option>Sirsa</option>
+        <option>Rewari</option>
+    </select>
+
+    <h1 id="result"></h1>
+
+    <br><br>
+
+    <input type="text" id="txtRed">  <br>
+    <input type="text" id="txtGreen">  <br>
+    <input type="text" id="txtBlue">  <br>
+    
+
+      <button onclick="setcolor()">Setcolor</button>
+    <script>
+
+
+function setcolor()
+{
+     red=document.getElementById("txtRed").value
+     green=document.getElementById("txtGreen").value
+     blue=document.getElementById("txtBlue").value
+ 
+    //  document.getElementById("result").style.color="rgb("+red+","+green+","+blue+")"     
+document.getElementById("result").style.color=`rgb(${red},${green},${blue})` 
+}
+ 
+        function set()
+        {
+            
+            x=document.getElementById("slCity").value
+            //  str=`Your Selected City is=${x}`
+         document.getElementById("result").innerHTML=`Your Selected City is=${x}` 
+            // console.log(str)
+        }
+    //     var x=10
+    //     var y=20
+    //     var z=x+y
+
+    // //  var str="value of x="+x+" y="+y+" sum="+z
+    //  var str= `value of x=${x} and value of y=${y} and sum=${z}`
+    //   console.log(str)
+    //  var str=''
+    //  var str=``            
+    </script>
+</body>
+</html>

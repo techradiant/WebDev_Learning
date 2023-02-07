@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter your First Number </h3> 
+    <input type="text" id="text-a"><br>
+
+    <h3>Enter your Second Number </h3> 
+    <input type="text" id="text-b"><br><br>
+
+    <h3>Select the Calculation you want</h3>
+        <button onclick="add()">Add</button>
+        <button onclick="Subtract()">Subtract</button>
+        <button onclick="Multiplication()">Multiplication</button>
+        <button onclick="Divison()">Divison</button><br><br>
+
+    <h3>Your Calculation below</h3>
+        <input type="text" id="text-c">   
+
+
+<script>
+    "use strict"
+    function add()
+    {
+        var x = parseInt(document.getElementById("text-a").value)
+        var y = parseInt(document.getElementById("text-b").value)
+        var z=x+y
+        document.getElementById("text-c").value=z
+    }
+    function Subtract()
+    {
+        var x = parseInt(document.getElementById("text-a").value)
+        var y = parseInt(document.getElementById("text-b").value)
+        var z=x-y
+        document.getElementById("text-c").value=z
+    }
+    function Multiplication()
+    {
+        var x = parseInt(document.getElementById("text-a").value)
+        var y = parseInt(document.getElementById("text-b").value)
+        var z=x*y
+        document.getElementById("text-c").value=z
+    }
+    function Divison()
+    {
+        var x = parseInt(document.getElementById("text-a").value)
+        var y = parseInt(document.getElementById("text-b").value)
+        var z=x/y
+        document.getElementById("text-c").value=z
+    }
+
+
+
+</script>
+
+</body>
+</html>

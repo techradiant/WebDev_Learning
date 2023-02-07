@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+    <body>
+        <h1 id="a1">1) sam</h1>
+        <h1 id="a2">2) mac</h1>
+        <h1 id="a3">3) maddam</h1>
+        <!-- <input type="text" id="was"> <br> <br> -->
+        <button onclick="gem()">Save</button>
+        <button onclick="mam()">reset</button><br><br>
+        <button onclick="fun1()">change 1st text color</button>
+        <button onclick="fun2()">change 2nd text color</button>
+        <button onclick="fun3()">change 3rd text color</button>
+        <br><br>
+        <button onclick="fun1reset()">reset 1st text color</button>
+        <button onclick="fun2reset()">reset 2nd text color</button>
+        <button onclick="fun3reset()">reset 3rd text color</button>
+        <br><br>
+        <input type="text" id="solo">
+        <button onclick="set()">change</button>
+
+
+    <script>
+        function set() 
+        {
+            x=document.getElementById("solo").value
+            document.getElementById("a1").innerHTML=x
+
+        }
+
+        function fun1() 
+        {
+            document.getElementById("a1").style.color="red"
+        }
+
+        function fun2() 
+        {
+            document.getElementById("a2").style.color="green"
+        }
+
+        function fun3() 
+        {
+            document.getElementById("a3").style.color="blue"
+        }
+
+        
+        function fun1reset() 
+        {
+            document.getElementById("a1").style.color=""
+        }
+
+        function fun2reset() 
+        {
+            document.getElementById("a2").style.color=""
+        }
+
+        function fun3reset() 
+        {
+            document.getElementById("a3").style.color=""
+        }
+
+
+        function gem()
+        {
+            document.getElementById("a1").innerHTML="hello 1"
+            document.getElementById("a2").innerHTML="hello 2"
+            document.getElementById("a3").innerHTML="hello 3"
+            document.getElementById("a1").style.color="red"
+            document.getElementById("a2").style.color="green"
+            document.getElementById("a3").style.color="blue"
+        }
+        function mam() 
+        {
+            document.getElementById("a1").innerHTML="1) sam"
+            document.getElementById("a2").innerHTML="2) mac"
+            document.getElementById("a3").innerHTML="3) madam"
+            document.getElementById("a1").style.color=""
+            document.getElementById("a2").style.color=""
+            document.getElementById("a3").style.color=""
+        }
+    </script>
+    </body>
+</html>

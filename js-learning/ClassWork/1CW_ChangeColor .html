@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bdy">
+    <input type="text" id="txtColor">  <br>
+    <button onclick="set()">Change</button>  <br>
+    <h1 id="i">Appu</h1>
+    <h1 id="ii">ab</h1>
+    <h1 id="iii">cg</h1>
+    <button onclick="change1()">Change Body Color(RED)</button>
+    <button onclick="change2()">Change Body Color(GREEN)</button>
+    <button onclick="change3()">Change Body Color(BLUE)</button>
+       <button onclick="test()" >Save</button>
+       <button onclick="clea()" >reset</button>
+       
+       <script> 
+
+        function set()
+        {
+         x=document.getElementById("txtColor").value
+         document.getElementById("bdy").style.backgroundColor=x 
+        }
+       function change1()
+       {
+        document.getElementById("bdy").style.backgroundColor="red"
+       }
+       function change2()
+       {
+        document.getElementById("bdy").style.backgroundColor="green"
+       }
+       function change3()
+       {
+        document.getElementById("bdy").style.backgroundColor="blue"
+       }
+            function test()
+            {
+                document.getElementById("i").innerHTML="shyam1"     
+                document.getElementById("ii").innerHTML="shyam2"     
+                document.getElementById("iii").innerHTML="shyam3"     
+            }
+
+            function clea()
+            {
+                 document.getElementById("i").innerHTML="Appu"
+                 document.getElementById("ii").innerHTML="Ab"
+                 document.getElementById("iii").innerHTML="cg   "
+            }
+       </script>
+</body>
+</html>

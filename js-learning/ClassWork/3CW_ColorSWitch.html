@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box
+        {
+            height: 200px;
+            width: 200px;
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        button
+        {
+            padding: 30px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+      <div id="i1" class="box"></div>
+      <div id="i2" class="box"></div>
+      <div id="i3" class="box"></div>
+      <div id="i4" class="box"></div>
+      <div id="i5" class="box"></div>
+<br><br>
+      <button onclick="set1()">i</button>
+      <button onclick="set2()">ii</button>
+      <button onclick="set3()">iii</button>
+      <button onclick="set4()">iv</button>
+      <button onclick="set5()">v</button>
+
+      <script>
+        function set1()
+        {
+            document.getElementById("i1").style.backgroundColor="red"
+            document.getElementById("i2").style.backgroundColor="white"
+            document.getElementById("i3").style.backgroundColor="white"
+            document.getElementById("i4").style.backgroundColor="white"
+            document.getElementById("i5").style.backgroundColor="white"
+             setTimeout(set2,500)
+        }
+        function set2()
+        {
+            document.getElementById("i1").style.backgroundColor="white"
+            document.getElementById("i2").style.backgroundColor="red"
+            document.getElementById("i3").style.backgroundColor="white"
+            document.getElementById("i4").style.backgroundColor="white"
+            document.getElementById("i5").style.backgroundColor="white"
+            setTimeout(set3,500)
+        }
+        function set3()
+        {
+            document.getElementById("i1").style.backgroundColor="white"
+            document.getElementById("i2").style.backgroundColor="white"
+            document.getElementById("i3").style.backgroundColor="red"
+            document.getElementById("i4").style.backgroundColor="white"
+            document.getElementById("i5").style.backgroundColor="white"
+            setTimeout(set4,500)
+            
+        }
+        function set4()
+        {
+            document.getElementById("i1").style.backgroundColor="white"
+            document.getElementById("i2").style.backgroundColor="white"
+            document.getElementById("i3").style.backgroundColor="white"
+            document.getElementById("i4").style.backgroundColor="red"
+            document.getElementById("i5").style.backgroundColor="white"
+            setTimeout(set5,500)
+        }
+        function set5()
+        {
+            document.getElementById("i1").style.backgroundColor="white"
+            document.getElementById("i2").style.backgroundColor="white"
+            document.getElementById("i3").style.backgroundColor="white"
+            document.getElementById("i4").style.backgroundColor="white"
+            document.getElementById("i5").style.backgroundColor="red"
+            setTimeout(set1,500)
+        }
+
+      </script>
+</body>
+</html>

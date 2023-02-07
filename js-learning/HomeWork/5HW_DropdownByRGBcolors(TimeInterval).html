@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input
+        {
+            height: 40px;
+            font-size: 25px;
+        }
+        select
+        {
+            height: 50px;
+            font-size: 30px;
+        }
+        button
+        {
+            height: 30px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <select onchange="set()" id="selcity">
+        <option>Rohtak</option>
+        <option>Chandigarh</option>
+        <option>Hisar</option>
+        <option>Gurgoan</option>
+        <option>Faridabad</option>
+    </select><br>
+
+    <h3>Put value of Red</h3>
+    <input type="text" id="txtred">
+    <h3>Put value of Green</h3>
+    <input type="text" id="txtgreen">
+    <h3>Put value of Blue</h3>
+    <input type="text" id="txtblue"><br><br>
+    <h3>Result</h3>
+    <h1 id="result"></h1>
+    <button onclick="setcolor()">SetColor</button>
+
+
+    <script>
+        var red=0, blue=0, green=0
+        function setcolor()
+        {
+            red=parseInt(Math.random()*256)
+            green=parseInt(Math.random()*256)
+            blue=parseInt(Math.random()*256)
+            //document.getElementById("result").style.color="rgb("+ red +","+ green +","+ blue +")"
+            document.getElementById("result").style.color=`rgb(${red},${green},${blue})`
+        }
+
+        setInterval(setcolor,1000)
+        function set() 
+        {
+            x=document.getElementById("selcity").value
+            document.getElementById("result").innerHTML=`Your selected city is = ${x}`
+        }
+    </script>
+</body>
+</html>
