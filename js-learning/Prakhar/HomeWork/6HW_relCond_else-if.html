@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<style>
+    #cssresult h2
+    {
+        color: rgb(159, 62, 255);
+    }
+    #cssresult h3
+    {
+        color:rgb(0, 125, 197);
+        text-align: center;
+    }
+    h1,h2
+    {
+        color: blue;
+        text-align: center;
+    }
+    h1
+    {
+        color: brown;
+        text-align: center;
+    }
+    button
+    {
+        margin: 0% 48%;
+    }
+</style>
+<body>
+    <h1>Enter your Marks</h1>
+    <hr>
+    <h2>Hindi - <input type="text" id="txt1"></h2 >
+    <h2>English - <input type="text" id="txt2"></h2>
+    <h2>Maths - <input type="text" id="txt3"></h2>
+    <h2>Science - <input type="text" id="txt4"></h2>
+    <h2>Social Science - <input type="text" id="txt5"></h2>
+    <h2>Computer - <input type="text" id="txt6"></h2>
+    
+    <hr>
+    <div id="cssresult">
+        <h2>Total Marks :- 600</h2>
+        <h2>Total Marks Obtained - <h3 id="total"></h3></h2>
+        <h2>Division - <h3 id="division"></h3></h2>
+        <h2>Result - <h3 id="result"></h3></h2>
+        <button onclick="average(),total(),result()">Check</button>
+    </div>
+<script>
+    function average()
+    {
+        a=parseInt(document.getElementById("txt1").value)
+        b=parseInt(document.getElementById("txt2").value)
+        c=parseInt(document.getElementById("txt3").value)
+        d=parseInt(document.getElementById("txt4").value)
+        e=parseInt(document.getElementById("txt5").value)
+        f=parseInt(document.getElementById("txt6").value)
+
+        sum=a+b+c+d+e+f
+        avg=sum/6
+        if(avg>=60)
+        {
+            document.getElementById("division").innerHTML="First Division"
+        }
+        else if(avg>=50)
+        {
+            document.getElementById("division").innerHTML="Second Division"
+        }
+        else if(avg>=40)
+        {
+            document.getElementById("division").innerHTML="Third Division"
+        }
+        else
+        {
+            document.getElementById("division").innerHTML="D-Grade"
+        }
+
+    }
+    function total()
+    {
+        a=parseInt(document.getElementById("txt1").value)
+        b=parseInt(document.getElementById("txt2").value)
+        c=parseInt(document.getElementById("txt3").value)
+        d=parseInt(document.getElementById("txt4").value)
+        e=parseInt(document.getElementById("txt5").value)
+        f=parseInt(document.getElementById("txt6").value)
+
+        sum=a+b+c+d+e+f
+        document.getElementById("total").innerHTML=sum
+    }
+    function result() 
+    {
+        a=parseInt(document.getElementById("txt1").value)
+        b=parseInt(document.getElementById("txt2").value)
+        c=parseInt(document.getElementById("txt3").value)
+        d=parseInt(document.getElementById("txt4").value)
+        e=parseInt(document.getElementById("txt5").value)
+        f=parseInt(document.getElementById("txt6").value)
+
+        sum=a+b+c+d+e+f
+        avg=sum/6
+        if(avg>=40)
+        {
+            document.getElementById("result").innerHTML="PASS"
+        }
+        else
+        {
+            document.getElementById("result").innerHTML="FAIL"
+        }
+    }
+</script>
+
+</body>
+</html>

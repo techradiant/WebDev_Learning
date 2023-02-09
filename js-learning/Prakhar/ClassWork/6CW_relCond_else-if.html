@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <input type="text" id="txtA"> <br>
+      <input type="text" id="txtB"> <br>
+      <input type="text" id="txtC"> <br>
+      <input type="text" id="txtD"> <br>
+      <input type="text" id="txtE"> <br>
+
+      <button onclick="check()">Check</button>
+<h1 id="result"></h1>
+
+        <script>
+            function check()
+            {
+                a=parseInt(document.getElementById("txtA").value)
+                b=parseInt(document.getElementById("txtB").value)
+                c=parseInt(document.getElementById("txtC").value)
+                d=parseInt(document.getElementById("txtD").value)
+                e=parseInt(document.getElementById("txtE").value)
+
+                sum=a+b+c+d+e
+                avg=sum/5
+                // document.getElementById("result").innerHTML=sum+"-"+avg
+                if(avg>=60)
+                 document.getElementById("result").innerHTML="First Division"
+                else if(avg>=50) 
+                    document.getElementById("result").innerHTML="Second Division"
+                else if(avg>=40)
+                    document.getElementById("result").innerHTML="Third Division"
+                else
+                document.getElementById("result").innerHTML="fail"
+            //   if(a>b)
+            //     document.getElementById("result").innerHTML="A is greater"
+            //   else
+            //    document.getElementById("result").innerHTML="B is greater"
+            }
+        </script>
+</body>
+</html>

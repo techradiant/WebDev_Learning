@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <input type="text" id="txtId"> <br>
+      <input type="text" id="txtPwd"> <br>
+ 
+        <button onclick="set()">Check</button>
+
+        <script>
+             function set()
+             {
+                   id=  document.getElementById("txtId").value
+                   pwd=  document.getElementById("txtPwd").value
+
+
+                  if(id=="ram")
+                  {
+                        if(pwd=="1234")
+                          {
+                              x= confirm("Are you sure wants to submit????")
+                              if(x==true)
+                                window.location.href="index.html"
+                              else  
+                                alert("try again...")  
+                          }
+                        else    
+                            alert("wrong password")
+                  } 
+                  else
+                  {
+                    alert("wrong user id")
+                  }
+             }
+           // function set()
+            // {
+            //    id=  document.getElementById("txtId").value
+            //    pwd=  document.getElementById("txtPwd").value
+
+            //    if(id=="ram"&&pwd=="1234")
+            //         alert("match")
+            //     else
+            //         alert("wrong user id or pwd")
+
+            // }
+            
+
+        </script>
+
+</body>
+</html>

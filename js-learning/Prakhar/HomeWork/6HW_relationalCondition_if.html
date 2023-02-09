@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my</title>
+</head>
+<body>
+    <input type="text" id="texta"> <br>
+    <button onclick="oddeven()">Check</button>
+
+    <h1 id="result"></h1>
+
+    <script>
+        function oddeven() 
+        {
+            num=document.getElementById("texta").value
+            x=num%2
+            if(x==0)
+            document.getElementById("result").innerHTML="Number is EVEN"
+            else
+            document.getElementById("result").innerHTML="Number is ODD"
+
+            x=10
+            y=10
+            z=x+y
+            if(z>30)
+                document.getElementById("result").innerHTML="ok"
+            else
+                document.getElementById("result").innerHTML="NO"
+
+
+
+
+            // x=num
+            // if(num/2)
+            // document.getElementById("result").innerHTML="Number is EVEN"
+            // else
+            // document.getElementById("result").innerHTML="Number is ODD"
+
+
+              // relational operator
+         // <   >    <=   >=   ==  != 
+        //     keyword
+        //    1) if   single alternate 
+        //    2) if else   double alternate
+        //    3) else if   multiple alternate
+
+        }
+    </script>
+</body>
+</html>

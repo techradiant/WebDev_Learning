@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=x, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Login your ID</h2>
+    <input type="text" id="txt1"><br><br>
+    <h2>Login your Password</h2>
+    <input type="text" id="txt2"><br><br>
+    <button onclick="log()">click here</button>
+
+    <script>
+        //by nesting method-->( page will open one by one eg. first open the loginpage and then forward to password page)
+
+        function log()
+        {
+            id = document.getElementById("txt1").value
+            pswd = document.getElementById("txt2").value
+            if(id=="prakhar")
+            {
+                if(pswd==1234)
+                {
+                    alert("correct password")
+                    x=confirm("are you shure you want to submitt?")
+                    if(x==true)
+                    window.location.href="index.html"
+                    else
+                    alert("try again")
+                }
+                else
+                {
+                    alert("wrong password")
+                }
+            }
+            else
+            {
+                alert(" wrong user id")
+            }
+        }
+
+        // //by logical method-->( page will open together eg. both login and password page open on one click )
+
+        // function log()
+        // {
+        //     id = document.getElementById("txt1").value
+        //     pswd = document.getElementById("txt2").value
+        //     if(id=="prakhar" && pswd==1234)
+        //     {
+        //         alert("welcome")
+        //     }
+        //     else
+        //     {
+        //         alert("retry for login and password")
+        //     }
+        // }
+    </script>
+</body>
+</html>
